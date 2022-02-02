@@ -18,7 +18,7 @@
     }
     &__discover {
         @include padding-block;
-        background-color: $color-foodBackground;
+        background-color: $color-accent;
         text-align: center;
         display: flex;
         flex-direction: column;

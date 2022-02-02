@@ -1,6 +1,6 @@
 .restaurants {
     @include padding-block;
-    background-color: $color-foodBackground;
+    background-color: $color-accent;
 
     display: flex;
     flex-direction: column;
@@ -13,7 +13,6 @@
         border-radius: 25px;
         @include shadow-primary;
         overflow: hidden;
-        cursor: pointer;
 
         display: flex;
         flex-direction: column;

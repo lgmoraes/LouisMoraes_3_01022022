@@ -1,7 +1,6 @@
 .btn {
     height: 60px;
     padding: 1em 30px;
-    margin: 1em;
 
     color: white;
     background: linear-gradient(to bottom, #ED73DA, #AA5DDC);
@@ -9,6 +8,11 @@
     font-weight: bold;
     cursor: pointer;
     @include shadow-primary;
+
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-functioning {
@@ -16,7 +20,7 @@
     padding: 1em 30px;
     margin: .8em 0 .8em 1.5em;
 
-    background-color: $color-foodBackground;
+    background-color: $color-accent;
     border-radius: 22px;
     font-weight: bold;
     cursor: pointer;
@@ -52,4 +56,84 @@
             color: $color-primary;
         }
     }
+}
+
+.btn-dish {
+    height: 80px;
+    padding: 0;
+    margin: .8em 0;
+
+    border-radius: 22px;
+    cursor: pointer;
+    @include shadow-primary;
+    overflow: hidden;
+
+    position: relative;
+    display: flex;
+    &:hover {
+        & .btn-dish__check {
+            width: 65px;
+        }
+    }
+    &__description {
+        padding-left: 1em;
+
+        overflow: hidden;
+
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & h3 {
+            margin: 0;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        & p {
+            margin: 0;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    &__price {
+        width: 65px;
+        padding-bottom: 1em;
+
+        font-weight: bold;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    &__check {
+        width: 0;
+
+        font-size: 1.2em;
+        color: white;
+        background-color: $color-tertiary;
+        overflow: hidden;
+        transition: .2s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.btn-back {
+    width: 30px;
+    height: 30px;
+
+    color: $color-footer;
+    font-size: 27px;
+
+    position: absolute;
+    top: 28px; left: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
