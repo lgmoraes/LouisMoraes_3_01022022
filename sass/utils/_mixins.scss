@@ -1,3 +1,11 @@
+@mixin font-primary {
+    font-family: 'Raleway', sans-serif;
+}
+
+@mixin font-title {
+    font-family: 'Shrikhand', cursive;
+}
+
 @mixin padding-block {
     padding: 2.5em 1.5em;
 }

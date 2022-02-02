@@ -24,10 +24,10 @@ input:focus {
 /*** BASE ***/
 
 body {
-    font-family: 'Raleway', sans-serif;
+    @include font-primary;
     font-size: 18px;
 }
 
 h1 {
-    font-family: 'Shrikhand', cursive;
+    @include font-title;
 }

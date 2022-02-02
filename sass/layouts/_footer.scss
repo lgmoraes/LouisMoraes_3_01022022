@@ -1,0 +1,28 @@
+.footer {
+    padding: 2em;
+    margin-top: 2em;
+    color: white;
+    background-color: $color-footer;
+
+    display: flex;
+    flex-direction: column;
+    & h2 {
+        margin-top: 0;
+        @include font-title;
+    }
+    &__links {
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        & p {
+            margin: 7px 0;
+            font-size: 19px;
+            cursor: pointer;
+        }
+        & i {
+            margin-right: .6em;
+            width: 1.3em;
+            text-align: center;
+        }
+    }
+}
