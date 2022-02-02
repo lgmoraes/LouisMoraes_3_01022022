@@ -1,0 +1,55 @@
+.btn {
+    height: 60px;
+    padding: 1em 30px;
+    margin: 1em;
+
+    color: white;
+    background: linear-gradient(to bottom, #ED73DA, #AA5DDC);
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    @include shadow-primary;
+}
+
+.btn-functioning {
+    height: 80px;
+    padding: 1em 30px;
+    margin: .8em;
+
+    background-color: $color-foodBackground;
+    border-radius: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    @include shadow-secondary;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    & i {
+        color: #7E7E7E;
+        margin-left: .5em;
+        margin-right: 1em;
+    }
+    & .circle {
+        width: 36px;
+        height: 36px;
+
+        color: white;
+        border-radius: 18px;
+        background-color: $color-primary;
+        font-family: sans-serif;
+
+        position: absolute;
+        top: 22px; left: -18px;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    &:hover {
+        background-color: pastel($color-primary);
+        & i {
+            color: $color-primary;
+        }
+    }
+}
