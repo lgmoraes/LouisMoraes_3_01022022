@@ -1,21 +1,30 @@
 .menu-dishes {
-    margin-bottom: 3.5em;
+    margin-bottom: -2em;
     display: flex;
     flex-direction: column;
     &__featured-picture {
         height: 350px;
         object-fit: cover;
+        @include desktop {
+            width: 100%;
+            height: 100%;
+
+            z-index: -1;
+            position: fixed;
+            top: 0;
+        }
     }
     &__list {
-        @include padding-block;
-        padding-bottom: 0;
+        padding: 2.5em 1.5em 4em;
         margin-top: -50px;
 
         background-color: $color-accent;
         border-radius: 50px 50px 0 0;
 
+        display: flex;
+        flex-direction: column;
         position: relative;
-        & .fa-heart {
+        .fa-heart {
             font-size: 27px;
 
             cursor: pointer;
@@ -23,21 +32,27 @@
             position: absolute;
             top: 2em; right: 2em;
         }
-        & h1 {
+        h1 {
+            padding-right: 2em;
             margin-top: 0;
         }
-        & h2 {
+        h2 {
             margin: .3em 0;
             font-weight: normal;
             text-transform: uppercase;
         }
-        & hr {
+        hr {
             width: 60px;
             height: 4px;
             margin: 0;
             border: 0;
 
             background-color: $color-tertiary;
+        }
+        @include desktop {
+            margin: 450px 5em 0;
+
+            background: linear-gradient(to bottom, rgba(255, 255, 255, .85) 0,#ffffff 300px);
         }
     }
     &__section {
@@ -50,8 +65,14 @@
         display: flex;
         flex-direction: column;
         margin: 1em 0;
+
+        gap: 20px;
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
-    & .btn {
+    .btn {
         padding: 1em 3em;
     }
 }
