@@ -7,11 +7,26 @@
         object-fit: cover;
         @include desktop {
             width: 100%;
-            height: 100%;
+            height: 75%;
 
             z-index: -1;
             position: fixed;
             top: 0;
+        }
+    }
+    &__degrade {
+        display: none;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
+        @include desktop {
+            display: block;
+            height: 200px;
+            position: absolute;
+
+            width: 100%;
+
+            z-index: -1;
+            position: fixed;
+            bottom: 25%;
         }
     }
     &__list {
