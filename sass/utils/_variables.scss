@@ -3,3 +3,8 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-accent: #F6F6F6;
 $color-footer: #353535;
+
+$breakpoints: (
+    tablet: 600px,
+    desktop: 900px
+);
