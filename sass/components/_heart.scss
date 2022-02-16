@@ -1,0 +1,9 @@
+.fa-heart {
+    & + .fa-heart {
+        opacity: 0;
+        transition: .3s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
