@@ -13,9 +13,35 @@
 @mixin shadow-primary {
     box-shadow: 0px 3px 12px 2px #b1b1b1;
 }
+@mixin shadow-primary-hover {
+    box-shadow: 0px 3px 12px 2px #646464;
+}
 
 @mixin shadow-secondary {
     box-shadow: 0px 4px 9px #d3d3d3;
+}
+
+@mixin btn-hover {
+    transition: .3s;
+    z-index: 1;
+    &:hover {
+        @include shadow-primary-hover;
+
+        &::after {
+            opacity: .2;
+        }
+    }
+    &::after {
+        content: "";
+
+        background-color: white;
+        opacity: 0;
+        transition: .3s;
+
+        position: absolute;
+        top: 0;left: 0;right: 0;bottom: 0;
+        z-index: -1;
+    }
 }
 
 @mixin tablet {
