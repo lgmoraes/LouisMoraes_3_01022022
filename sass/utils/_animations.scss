@@ -1,0 +1,24 @@
+@keyframes full-width {
+    0%    {width: 100%;}
+    100%  {width: 100%;}
+}
+
+@keyframes invisible {
+    0%   {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes fade {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes rotate {
+    0%   {transform: rotate(0);}
+    100% {transform: rotate(1turn);}
+}
+
+@keyframes slideUp {
+    0%   {transform: translateY(2em);}
+    100% {transform: translateY(0);}
+}

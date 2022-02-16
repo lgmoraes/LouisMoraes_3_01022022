@@ -87,6 +87,16 @@
             flex-wrap: wrap;
         }
     }
+    .btn-dish {
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                animation:
+                    invisible .15s*$i,
+                    slideUp .7s .15s*$i,
+                    fade .5s .15s*$i;
+            }
+        }
+    }
     .btn {
         padding: 1em 3em;
     }
