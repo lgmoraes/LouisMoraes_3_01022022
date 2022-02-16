@@ -28,9 +28,16 @@
             font-size: 25px;
         }
     }
-    &__discover-div {
+    &__layout {
         display: flex;
         flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+            align-items: flex-start;
+            .home__functioning {
+                order: 1;
+            }
+        }
     }
     &__functioning {
         @include padding-block;
@@ -45,16 +52,81 @@
             margin: auto;
         }
     }
-    @include desktop {
-        &__layout {
-            display: flex;
+    &__restaurants {
+        @include padding-block;
+        background-color: $color-accent;
+    
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            background: none;
+        }
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        @include desktop {
             flex-direction: row;
+            flex-wrap: wrap;
+        };
+    }
+    &__card {
+        border-radius: 25px;
+        @include shadow-primary;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        img {
+            height: 180px;
+            object-fit: cover;
         }
-        &__discover {
+        @include tablet-only {
+            height: 180px;
+            flex-direction: row;
+            img {
+                flex: 2 0 0;
+                width: 0;
+            }
+        }
+        @include desktop {
+            width: calc(50% - 11px);
+        }
+    }
+    &__card-description {
+        padding: 1em;
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        h3 {
+            padding-right: 1.5em;
+            margin: 0;
+        }
+        .fa-heart {
+            font-size: 24px;
+            position: absolute;
+            top: .8em; right: .8em;
+        }
+        @include tablet-only {
+            width: auto;
+            padding: 1.2em;
+            flex: 3 1 0;
+            h3 {
+                margin-bottom: .5em;
+            }
+            .fa-heart {
+                top: 1em; right: 1em;
+            }
+        }
+    }
+    &__card-location {
+        margin: 0;
+    }
+    @include desktop {
+        &__restaurants {
             flex: 2.5 1 0;
-        }
-        &__discover-div {
-            margin: auto;
         }
         &__functioning {
             flex: 1 1 0;
