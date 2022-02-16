@@ -1,0 +1,39 @@
+.loading {
+    width: 0;
+    background-color: white;
+
+    animation:
+        visible 3s steps(2, start),
+        fade reverse .3s 2.7s;
+    overflow: hidden;
+
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    z-index: 1;
+    display: flex;
+
+    &__spinner {
+        color: $color-primary;
+
+        margin: auto;
+        font-size: 5em;
+
+        animation: rotate infinite 2s steps(8, end);
+    }
+}
+
+
+@keyframes visible {
+    0%   {width: 100%;}
+    100%  {width: 100%;}
+}
+
+@keyframes fade {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(1turn);}
+}
