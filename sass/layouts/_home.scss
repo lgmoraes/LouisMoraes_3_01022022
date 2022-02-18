@@ -104,20 +104,12 @@
             padding-right: 1.5em;
             margin: 0;
         }
-        .fa-heart {
-            font-size: 24px;
-            position: absolute;
-            top: .8em; right: .8em;
-        }
         @include tablet-only {
             width: auto;
             padding: 1.2em;
             flex: 3 1 0;
             h3 {
                 margin-bottom: .5em;
-            }
-            .fa-heart {
-                top: 1em; right: 1em;
             }
         }
     }
