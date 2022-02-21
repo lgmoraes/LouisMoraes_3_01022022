@@ -75,7 +75,7 @@
     display: flex;
     &:hover {
         & .btn-dish__check {
-            width: 65px;
+            width: 75px;
         }
     }
     @include tablet {
@@ -109,28 +109,38 @@
         }
     }
     &__price {
-        width: 65px;
+        width: 75px;
+        padding-right: .5em;
+        padding-left: 1em;
         padding-bottom: 1em;
 
         font-weight: bold;
 
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-end;
     }
     &__check {
         width: 0;
 
-        font-size: 1.2em;
+        font-size: 1.5em;
         color: white;
         background-color: $color-tertiary;
         overflow: hidden;
-        transition: .2s;
+        transition: $check-animation-duration;
 
         display: flex;
         flex-shrink: 0;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        &::before {
+            margin-left: calc((75px / 2) - (27px / 2)); // Centre l'icone
+            transition: $check-animation-duration transform;
+            transform: rotate(0turn);
+        }
+    }
+    &:hover .btn-dish__check::before {
+        transform: rotate(1turn);
     }
 }
 
