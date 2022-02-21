@@ -5,7 +5,7 @@ $color-accent: #F6F6F6;
 $color-footer: #353535;
 
 $heart-size: 26px;
-$heart-animation-duration: .4s;
+$heart-transition: 1s cubic-bezier(0,.99,.53,.95);
 $heart-offset: .8em;
 
 $spinner-animation-duration: 2s;

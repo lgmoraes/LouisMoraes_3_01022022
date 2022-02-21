@@ -22,7 +22,7 @@
         height: 0px;
         
         color: red;
-        transition: $heart-animation-duration;
+        transition: $heart-transition;
         overflow: hidden;
         
         position: absolute;
@@ -35,7 +35,7 @@
 
         overflow: hidden;
 
-        transition: $heart-animation-duration;
+        transition: $heart-transition;
         position: absolute;
         top: 0; right: 0;
     }
