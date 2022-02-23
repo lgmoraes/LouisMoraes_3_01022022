@@ -1,3 +1,5 @@
+@use "../utils/index" as *;
+
 .home {
     display: flex;
     flex-direction: column;

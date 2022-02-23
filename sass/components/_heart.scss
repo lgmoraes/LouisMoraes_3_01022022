@@ -1,3 +1,5 @@
+@use "../utils/index" as *;
+
 .heart {
     width: $heart-size;
     height: $heart-size;

@@ -1,13 +1,8 @@
-@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/animations";
-@import "./base/base";
-@import "./components/buttons";
-@import "./components/heart";
-@import "./layouts/loading";
-@import "./layouts/header";
-@import "./layouts/home";
-@import "./layouts/footer";
-
-@import "./layouts/menu-dishes";
+@use "./base/base";
+@use "./components/buttons";
+@use "./components/heart";
+@use "./layouts/loading";
+@use "./layouts/header";
+@use "./layouts/home";
+@use "./layouts/footer";
+@use "./layouts/menu-dishes";
