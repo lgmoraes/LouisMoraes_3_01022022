@@ -10,6 +10,9 @@
 
 @mixin padding-block {
     padding: 2.5em 1.5em;
+    @include desktop {
+        padding: 1.5em 1.5em;
+    }
 }
 
 @mixin shadow-primary {
