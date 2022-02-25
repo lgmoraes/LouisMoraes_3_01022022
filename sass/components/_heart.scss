@@ -23,7 +23,7 @@
     .fas {
         height: 0px;
         
-        color: red;
+        color: pastel($color-primary, 80%);
         transition: $heart-transition;
         overflow: hidden;
         
