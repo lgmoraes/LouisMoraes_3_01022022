@@ -21,9 +21,8 @@
         }
     }
     .fas {
-        height: 0px;
-        
-        color: pastel($color-primary, 80%);
+        color: black;
+        height: 0;
         transition: $heart-transition;
         overflow: hidden;
         
@@ -31,6 +30,20 @@
         bottom: 0; right: 0;
         display: flex;
         align-items: end;
+
+        background: white;
+        mix-blend-mode: darken;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;right: 0;left: 0;bottom: 0;
+
+            background: linear-gradient(to top,
+                pastel($color-secondary, 75%),
+                pastel($color-primary, 65%));
+            mix-blend-mode: lighten;
+        }
     }
     .far {
         height: $heart-size;
