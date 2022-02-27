@@ -15,11 +15,24 @@
     display: flex;
 
     &__spinner {
-        color: $color-primary;
-
         margin: auto;
+        
+        color: black;
         font-size: 5em;
 
         animation: rotate infinite $spinner-animation-duration steps(8, end);
+    }
+    &__color-filter {
+        width: 120px;
+        height: 120px;
+        margin: auto;
+
+        position: absolute;
+        top: 0;right: 0;left: 0;bottom: 0;
+
+        background: linear-gradient(to top,
+            pastel($color-primary, 50%),
+            pastel($color-secondary, 60%));
+        mix-blend-mode: lighten;
     }
 }
