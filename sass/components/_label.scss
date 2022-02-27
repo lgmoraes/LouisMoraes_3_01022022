@@ -1,0 +1,13 @@
+@use "../utils/index" as *;
+
+.label {
+    padding: .5em 1em;
+    
+    color: darken($color-tertiary, 38%);
+    background-color: $color-tertiary;
+    font-weight: bold;
+    border-radius: 3px;
+
+    position: absolute;
+    top: $label-offset; right: $label-offset;
+}

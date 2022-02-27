@@ -54,4 +54,8 @@
         position: absolute;
         top: 0; right: 0;
     }
+    @include tablet-only {
+        top: auto;
+        bottom: .7em;
+    }
 }

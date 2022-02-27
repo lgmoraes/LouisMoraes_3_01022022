@@ -78,6 +78,7 @@
         @include shadow-primary;
         overflow: hidden;
 
+        position: relative;
         display: flex;
         flex-direction: column;
         img {
@@ -90,6 +91,9 @@
             img {
                 flex: 2 0 0;
                 width: 0;
+            }
+            .label ~ .home__card-description h3 {
+                padding-right: 5.5em;
             }
         }
         @include desktop {
@@ -111,6 +115,7 @@
             padding: 1.2em;
             flex: 3 1 0;
             h3 {
+                padding-right: 0;
                 margin-bottom: .5em;
             }
         }
